@@ -1,6 +1,6 @@
 MCQ,Choices,Correct
-Who coined the term machine learning in 1959?,a: Donald Hebb | b: Raytheon Company | c: Arthur Samuel | d: Tom M. Mitchell,c
-What was the name of the experimental 'learning machine' developed by Raytheon Company in the early 1960s?,a: Cybertron | b: HAL 9000 | c: Deep Blue | d: R2-D2,a
-Who proposed the early mathematical models of neural networks for machine learning algorithms?,a: Walter Pitts | b: Warren McCulloch | c: Donald Hebb | d: Tom M. Mitchell,b
-What is the main purpose of modern-day machine learning?,a: To confuse data | b: To make predictions based on models | c: To create chaos | d: To hide information,b
-"According to Tom M. Mitchell, when is a computer program said to learn?",a: When it plays video games | b: When it improves performance at tasks with experience | c: When it shuts down | d: When it stops functioning,b
+Who coined the term machine learning in 1959?,a: Donald Hebb | b: Tom M. Mitchell | c: Arthur Samuel | d: Raytheon Company,c
+What was the earliest machine learning model introduced by Arthur Samuel in the 1950s?,a: Program for calculating winning chance in checkers | b: Learning machine with punched tape memory | c: Artificial neural network | d: Computer vision of moles,a
+Who proposed the early mathematical models of neural networks to mirror human thought processes?,a: Donald Hebb | b: Walter Pitts | c: Warren McCulloch | d: Tom M. Mitchell,c
+What is the main objective of modern-day machine learning?,a: To develop new computer games | b: To classify data based on developed models | c: To study human cognitive processes | d: To predict stock market trends,b
+"According to Tom M. Mitchell, when is a computer program said to learn from experience?",a: When it can play chess | b: When its performance improves with experience | c: When it can recognize speech patterns | d: When it can analyze sonar signals,b

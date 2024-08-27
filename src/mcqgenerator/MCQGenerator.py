@@ -39,7 +39,7 @@ quiz_generation_prompt = PromptTemplate(
     template=template)
 
 
-quiz_chain=LLMChain(llm=llm,prompts=quiz_generation_prompt,output_key="quiz",verbose=True)
+quiz_chain=LLMChain(llm=llm,prompt=quiz_generation_prompt,output_key="quiz",verbose=True)
 
 
 template2="""
@@ -56,9 +56,13 @@ Check from an expert English Writer of the above quiz:
 
 quiz_evaluation_prompt=PromptTemplate(input_variables=["subject", "quiz"], template=template2)
 
-review_chain=LLMChain(llm=llm, prompt=quiz_evaluation_prompt, output_key="review", verbose=True)
+review_chain=LLMChain( prompt=quiz_evaluation_prompt,llm=llm, output_key="review", verbose=True)
 
 
 # This is an Overall Chain where we run the two chains in Sequence
-generate_evaluate_chain=SequentialChain(chains=[quiz_chain, review_chain], input_variables=["text", "number", "subject", "tone", "response_json"],
-                                        output_variables=["quiz", "review"], verbose=True,)
+generate_evaluate_chain = SequentialChain(
+    chains=[quiz_chain, review_chain],
+    input_variables=["text", "number", "subject", "tone", "response_json"],
+    output_variables=["quiz", "review"],
+    verbose=True,
+)
