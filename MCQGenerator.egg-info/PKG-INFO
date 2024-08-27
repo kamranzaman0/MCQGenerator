@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: MCQGenerator
+Version: 0.0.1
+Author: Kamran Zaman
+Author-email: kamranzaman0502@gmail.com
+Requires-Dist: openai
+Requires-Dist: langchain
+Requires-Dist: streamlit
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
