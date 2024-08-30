@@ -1,31 +1,67 @@
-For Deploying the Project in AWS Plateform Follow the bellow steps
+# AWS Deployment Guide
 
-# 1.First login to the AWS with your user name and password (link)
-# 2. Search about the EC2 Instanse
-# 3. You need to configure the ubuntu machine
-# 4. Launch the instase
-# 5. Update the machine using bellow command
-  sudo apt update
-  sudo apt-get update 
-  sudo apt upgrade
-  sudo apt install git curl unzip tar make sudo vim wget
-  git clone "yoour repo link"
-  sudo apt install python3-pi
-  pip3 install -4 requirements
-  python3 -m streamlit run StreamlitAPP.py
+## 1. Log in to AWS
+   - Visit the [AWS Management Console](https://aws.amazon.com/console/) and log in using your username and password.
 
-# 6. if you want to add open api key
+## 2. Search for EC2 Instance
+   - In the AWS Management Console, search for "EC2" and select it.
 
-  1.create .env file in your server
-  2. touch .env
-  3. vi .evn open the .evn file
-  4. press insert from keyboard
-  5. copy your api key and paste it in the .env file
-  6. press Esc key and then write :wq and hit enter
-# 7. For configure the port follow bellow steps
+## 3. Configure the Ubuntu Machine
+   - Choose an Ubuntu AMI (Amazon Machine Image) for your instance.
+   - Select the instance type that suits your project requirements.
+   - Configure instance details, add storage, and tag your instance.
 
-  Go with your security and add the inbound rule 
-  add the port 8501
-  press save button
+## 4. Launch the Instance
+   - Review your configurations and click "Launch" to start your instance.
 
+## 5. Update the Machine
+   - SSH into your EC2 instance.
+   - Run the following commands to update the machine and install necessary packages:
 
+     ```bash
+     sudo apt update
+     sudo apt-get update
+     sudo apt upgrade
+     sudo apt install git curl unzip tar make sudo vim wget
+     ```
+
+   - Clone your repository:
+
+     ```bash
+     git clone "your-repo-link"
+     ```
+
+   - Install Python and project dependencies:
+
+     ```bash
+     sudo apt install python3-pip
+     pip3 install -r requirements.txt
+     ```
+
+   - Run your Streamlit app:
+
+     ```bash
+     python3 -m streamlit run StreamlitAPP.py
+     ```
+
+## 6. Add OpenAI API Key (Optional)
+   - If your project requires an API key, follow these steps to add it:
+     1. Create a `.env` file on your server:
+
+        ```bash
+        touch .env
+        ```
+
+     2. Open the `.env` file:
+
+        ```bash
+        vi .env
+        ```
+
+     3. Press `i` to enter insert mode, then paste your API key.
+     4. Press `Esc` to exit insert mode, then type `:wq` and press Enter to save and close the file.
+
+## 7. Configure the Port
+   - Go to your EC2 instance's Security Groups settings.
+   - Add an inbound rule to allow traffic on port `8501` (or whichever port your app uses).
+   - Save the security group settings.
