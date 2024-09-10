@@ -1,3 +1,52 @@
+# Cloing Guidlines
+
+## 1. Clone the repository
+
+   - Clone your repository:
+
+     ```bash
+     git clone "https://github.com/kamranzaman0/MCQGenerator.git"
+     ```
+## 2. Ceate Virtual Environment
+
+   - Create Virtual Envirionment:
+
+     ```bash
+     conda create -n venv python=3.8 -y
+     ```
+     
+   - Activate Virtual Envirionment:
+
+     ```bash
+     conda activate venv
+     ```
+## 3. Install Requirements
+
+
+   - Install Python and project dependencies:
+
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+   - Run your Streamlit app:
+
+     ```bash
+     python3 -m streamlit run StreamlitAPP.py
+     ```
+
+## 4. Add OpenAI API Key (Optional)
+   - If your project requires an API key, follow these steps to add it:
+     1. Create a `.env` file on your server:
+
+        ```bash
+        touch .env
+        ```
+        ```
+
+     2. OPENAI_API_KEY = "",then in the inverted comma paste your API key.
+     4. Then save the file.
+
 # AWS Deployment Guide
 
 ## 1. Log in to AWS
